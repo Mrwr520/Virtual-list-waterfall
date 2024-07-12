@@ -1,31 +1,33 @@
 <template>
-  <div
-    ref="container"
-    id="cwidth"
-    class="relative visible"
-    :style="{ height: containerheight + 'px' }"
-  >
-    <!--     console.log(    containerheight.value); -->
-    <!-- transform: `translate(${item.left}px, ${item.top}px)`, -->
+  <div class="overflow-y-scroll scrollbar h-full">
     <div
-      v-show="isShow"
-      v-for="(item, index) in r1"
-      :id="item.idx"
-      :key="item.picture_id"
-      class="tran absolute transition-all"
-      :style="{
-        transform: `translate(${item.left}px, ${item.top}px)`,
-      }"
+      ref="container"
+      id="cwidth"
+      class="relative visible"
+      :style="{ height: containerheight + 'px' }"
     >
-      <imageitem :data="item" :width="itemWidth" />
-    </div>
-    <!-- 加载缓冲区 -->
-    <div
-      ref="loading"
-      class="absolute text-center w-full text-xl"
-      :style="{ top: containerheight - 5 + 'px' }"
-    >
-      <div>加载中。。。</div>
+      <!--     console.log(    containerheight.value); -->
+      <!-- transform: `translate(${item.left}px, ${item.top}px)`, -->
+      <div
+        v-show="isShow"
+        v-for="(item, index) in r1"
+        :id="item.idx"
+        :key="item.picture_id"
+        class="tran absolute transition-all"
+        :style="{
+          transform: `translate(${item.left}px, ${item.top}px)`,
+        }"
+      >
+        <imageitem :data="item" :width="itemWidth" />
+      </div>
+      <!-- 加载缓冲区 -->
+      <div
+        ref="loading"
+        class="absolute text-center w-full text-xl"
+        :style="{ top: containerheight - 5 + 'px' }"
+      >
+        <div>加载中。。。</div>
+      </div>
     </div>
   </div>
 </template>
