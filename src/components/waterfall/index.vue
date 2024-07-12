@@ -1,6 +1,6 @@
 <template>
     <div class="  w-full  " >
-        <div class=" w-1/2 fixed top-1/2 left-1/2   -translate-x-1/2 -translate-y-1/2 h-2/3  ">
+        <div class=" w-1/2 fixed top-1/2 left-1/2   -translate-x-1/2 -translate-y-1/2 h-2/3   overflow-y-scroll scrollbar">
             <m-waterfall v-model="isdone" :data="data" :rowSpace="10" ></m-waterfall>
         </div>
     </div>
