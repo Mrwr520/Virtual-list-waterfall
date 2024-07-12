@@ -10,7 +10,7 @@
       <!-- transform: `translate(${item.left}px, ${item.top}px)`, -->
       <div
         v-show="isShow"
-        v-for="(item, index) in r1"
+        v-for="(item) in r1"
         :id="item.idx"
         :key="item.picture_id"
         class="tran absolute transition-all"
